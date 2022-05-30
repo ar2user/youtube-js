@@ -11,32 +11,91 @@
   <h1>Ejercicios de Programación en JavaScript</h1>
   <script>
     /* 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFunción("Hola Mundo") devolverá 10 */
-
+    
+    let cadena = "Hola Mundo";
+    
+    function contar (palabra) {
+        
+    let contador = 0;
+    
+    for (const caracter of cadena) {
+        contador ++;
+    }
+    
+    return contador;
+    
+    }
+    
+    console.log(contar(cadena));
+    
 
     /* 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
 
+    let cadena = "Hola Mundo";
+    
+    function quitar (palabra, numero) {
+    return palabra.slice(0, numero)       
+    }
+    
+    console.log(quitar(cadena, 4));
 
 
     /* 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.
      miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
 
+    let cadena = "Hola que tal";
+    
+    function arreglo (palabra, separador) {
+    let signo = separador.toString();    
+    return palabra.split(separador);  
+    }
+    
+    console.log(arreglo(cadena, " "));
 
 
     /* 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo */
-
+    
+    let cadena = "Hola Mundo";
+    
+    function repite (palabra, repeticiones) {
+    for ( let i = 0; i < repeticiones; i++) {
+    console.log(palabra); }   
+    }
+    repite(cadena, 3);
 
 
     /* 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH" */
-
-
+    
+    let cadena = "Hola Mundo";
+    
+    function reversa(palabra) {
+    return palabra.split("").reverse().join("");
+    }
+    console.log(reversa(cadena));
+    
 
     /* 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2 */
+    
+    let cadena = "hola mundo adios mundo";
+    
+    function palabras(cadena, encontrar) {
+    let contador = 0;
+    let separar = cadena.split(" ");
+    separar.forEach( palabra => {
+    if (palabra === encontrar) {
+        contador++;
+    }  
+    });
+    return contador;
+    }
+    console.log(palabras(cadena, "mundo"));
 
-
-
+    
     /* 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true */
 
-
+    let cadena = "Salas";
+    let reversa = cadena.split("").reverse().join("");
+    console.log(reversa);
 
     /* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5 */
 
