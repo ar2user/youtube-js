@@ -95,6 +95,13 @@
 
     let cadena = "Salas";
     let reversa = cadena.split("").reverse().join("");
+    
+    function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    
+    console.log(capitalizeFirstLetter('foo')); // Foo
+    
     console.log(reversa);
 
     /* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5 */
